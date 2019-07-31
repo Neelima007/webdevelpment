@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHP notes : class one</title>
+<style type="text/css">
+body{
+	font-family:calibri;
+}
+.code{
+    background-color: #eee;
+    color: #3C3737;
+    padding: 10px;
+}
+
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+p, li{
+	font-family:calibri;
+	width: 1200px;
+	text-align: justify;
+	line-height: 1.5;
+}
+h3{
+  color: #DA3B3B;
+}
+table.reference {
+  width: 100%;
+  max-width: 100%;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  text-align:left;
+}
+
+h2{
+	color:#DE0000;
+}
+
+</style>
+</head>
+
+<body>
+<h3>Welcome to CSS3 CLASS: <br />
+  -----------------------<br />
+  1) our website will be light weight.<br />
+  2) Images in our website is less.<br />
+  3) lots of additional properties...<br />
+------------------------------------------</h3>
+<p>&nbsp;</p>
+<p>CSS3 a new version of CSS or cascading stylesheet benefits from technical features and properties. From better maintenance, loading speed, and layout design properties CSS3 is much more versatile. Designers get to implement the design elements from CSS3 in a simpler manner. In this article, we would discuss the advantages of CSS3 over CSS.</p>
+<p>Multi column layout<br />
+  The CSS3 is beneficial over CSS as it has multi column layouts without use for multiple divS. Following the use of CSS3 the browser would accept the properties and create columns. These layouts are supported by safari 3, safari 4 and firefox 1.5.</p>
+<p>Multiple backgrounds<br />
+  CSS3 adds multiple layered backgrounds to an element using multiple properties. This property from CSS3 adds to a visual programmer or designer's workflow. The property also helps in reducing the markup for the design. There is a significant reduction to the workflow effort.</p>
+<p>Text shadow<br />
+  The text shadow property from CSS3 is a widely accepted advantage for web designers. The property provides web designers with the ability to have a cross browser tool. This property adds dimensions to designs and makes text stand out. The text then has added depth and dimension.</p>
+<p>@font-face-Attribute<br />
+  This technology brings the custom embed to fonts easily for the designer. The property brings better typography to web design and also makes the attribute usable in practice. This is one of the more highly anticipated properties.</p>
+<p>Border Radius<br />
+  The border- radius property provides a curved corner to all the background images. This is one of the most widely used properties. The web design that results is cleaner and the development process for design is more efficient. The property is not critical to design, yet is an important facet to design process and development.</p>
+<p>Border Image<br />
+  The property for border image indicates the image of the border for an element. This property would give a consistency to design elements with scaling and tiling of the borders. Although not a highly sought after design property, this property further amplifies border image styling.</p>
+<p>Box shadow<br />
+  The property adds a shadow to the design without extra markup and background images. The box shadow enhances the design details without affecting content readability. The box shadow adds further multiple values while the horizontal and vertical offsets as also shadow colors are more commonly used.</p>
+<p>Box Sizing<br />
+  The property is especially useful in subtracting padding and border to a specified height and width. From this property the designer gets to know the exact specifications to the browser calculations of width and height of an element.</p>
+<p>Media queries<br />
+  The property for the media queries defines different styles for different devices based upon their capabilities. A very useful property as the designer would not essentially have to write separate style sheets for different devices. Also no javascript would be required to assess the capabilities and properties of user's browser.</p>
+<p>File size and loading time<br />
+  CSS3 prevails over CSS as a much better language for supporting faster loading time. The CSS3 language builds upon a better file handling and while the faster load time is important for the website with higher traffic. Here the effect for loading time compounds further and benefits the web designer.<br />
+</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<h3>CSS3 : go to google and type : css3 generator </h3>
+<p>http://css3generator.com/</p>
+<p>http://www.css3generator.in/</p>
+<p>&nbsp;</p>
+<h3>1) Border Radius: It will give round corner in div or box. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create one css class for this div</p>
+<p>3) apply this properties below Ex : <br />
+  -webkit-border-radius: 5px 5px 5px 5px;<br />
+border-radius: 5px 5px 5px 5px;</p>
+<p><img src="images/1.jpg" width="414" height="116" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .b-radius{<br />
+    width: 500px;<br />
+    height: 200px;<br />
+    background-color: aqua;<br />
+    -webkit-border-radius: 5px 5px 5px 5px;<br />
+    border-radius: 10px 10px 10px 10px;<br />
+    }<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;div class=&quot;b-radius&quot;&gt; &lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+<h3>&nbsp;</h3>
+
+<h3>2) Box Shadow: It will give shadow in div or box. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create one css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="boxShadowCode">-webkit-box-shadow: 10px 5px 25px 5px #F23AA8;<br />box-shadow: 10px 5px 25px 5px #F23AA8;</pre>
+<p><img src="images/2.jpg" width="445" height="148" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .b-shadow{<br />
+    width: 500px;<br />
+    height: 200px;<br />
+    background-color: aqua;<br />
+  </p>
+  <pre ng-bind-html="boxShadowCode">-webkit-box-shadow: 10px 5px 25px 5px #F23AA8;<br />box-shadow: 10px 5px 25px 5px #F23AA8;</pre>
+  <p><br />
+    }<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;div class=&quot;b-shadow&quot;&gt; &lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+<h3>3)Text Shadow: It will give shadow in text. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create one css class for this div</p>
+<p>3) apply this properties below Ex : <br />
+  -webkit-border-radius: 5px 5px 5px 5px;<br />
+border-radius: 5px 5px 5px 5px;</p>
+<p><img src="images/3.jpg" width="205" height="68" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .t-shadow{<br />
+color: aqua;<br />
+font-family: sans-serif;<br />
+font-size: 20px;<br />
+text-shadow: 10px 20px 20px #030BFF;<br />
+}<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;span class=&quot;t-shadow&quot;&gt;Ruchiwebsolutions&lt;/span&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+
+<h3>RGBA: (<strong>rgba</strong>(red, green, blue, alpha)). We are going to apply in our color tag, or background-color properties. Follow below steps:</h3> 
+<p>1) create div in body section of html | Create one anker with separate class</p>
+<p>2) create both css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">background-color: rgba(11, 50, 15, 50);<br /><br />color: rgba(11, 50, 15, 50);</pre>
+<p><img src="images/5.jpg" width="430" height="148" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .text-col{<br />
+color: rgba(22, 50, 50, 25);<br />
+}<br />
+.box-col{<br />
+width: 400px;<br />
+height: 100px;<br />
+background-color: rgba(11, 50, 15, 50);<br />
+}<br />
+<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+&lt;a href=&quot;#&quot; class=&quot;text-col&quot;&gt;php2ranjan.com&lt;/a&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;div class=&quot;box-col&quot;&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+<h3>font face: It will your font family with arial in entire website. Follow below steps: download font, upload into your project folder, create css with this font.</h3> 
+<p>1) no need to create any div</p>
+<p>2) no need to create any csss class</p>
+<p>3) write below code in your css file : </p>
+<p>help https://www.fontsquirrel.com/fonts/special-elite</p>
+<p>https://fonts.google.com/specimen/Special+Elite</p>
+<p>: https://design.google/library/choosing-web-fonts-beginners-guide/</p>
+<p> @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i'); </p>
+<p>or<br />
+</p>
+<pre ng-bind-html="fontFaceCode">@font-face {<br />  font-family: &quot;arial&quot;;<br />  src: url(&quot;fantasy.eot?&quot;) format(&quot;eot&quot;),<br />  url(&quot;fantasy.woff&quot;) format(&quot;woff&quot;),<br />  url(&quot;fantasy.ttf&quot;) format(&quot;truetype&quot;);<br />}</pre>
+<p><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    @font-face {<br />
+      font-family: &quot;arial&quot;;<br />
+      src: url(&quot;fantasy.eot?&quot;) format(&quot;eot&quot;),<br />
+      url(&quot;fantasy.woff&quot;) format(&quot;woff&quot;),<br />
+      url(&quot;fantasy.ttf&quot;) format(&quot;truetype&quot;);<br />
+    }<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;h4 style=&quot;font-family:'28 Days Later';&quot;&gt; Ruchiwebsolutions&lt;/h4&gt;<br />
+    &lt;h4 style=&quot;font-family:Fantasy Clipart;&quot;&gt; Ruchiwebsolutions&lt;/h4&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+<h3>column count and column gap: how many column you want in one row and what should be gap between tow column. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create one css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="multipleColumnsCode">.col{<br />     width: 600px;<br />    height: 100px;<br /> -moz-column-count: 2;<br />-moz-column-gap: 20px;<br />-webkit-column-count: 2;<br />-webkit-column-gap:15px;<br />column-count: 2;<br />column-gap: 15px;<br />}</pre>
+<p><img src="images/7.jpg" width="936" height="128" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .col{<br />
+width: 600px;<br />
+height: 100px;<br />
+-moz-column-count: 2;<br />
+-moz-column-gap: 20px;<br />
+-webkit-column-count: 2;<br />
+-webkit-column-gap:15px;<br />
+column-count: 2;<br />
+column-gap: 15px;<br />
+}<br />
+<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;div class=&quot;col&quot;&gt;<br />
+php2ranjan allows you to easily generate useful snippets of CSS3 and copy them straight into your projects.</p>
+  <p>No more trying to remember what the syntax is for the border-radius rule in a webkit browser. These tools take care of all the vendor prefixes.</p>
+  <p>Simply select the CSS3 element you want to use, style it in your browser and then paste it into your project.No more trying to remember what the syntax is for the border-radius rule in a webkit browser. These tools take care of all the vendor prefixes.</p>
+  <p>Simply select the CSS3 element you want to use, style it in your browser and then paste it into your project.<br />
+  &lt;/div&gt;</p>
+  <p><br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+<h3>Box Resize: you can resize horizontal or vertical the box or div mean you can create one div with height and width, see the bottom right, just drag it.. Follow below steps:</h3> 
+<p>1) create div in body section of html </p>
+<p>2) create a css class</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">resize: horizontal;/* resize: vertical*/<br />    overflow: auto;<br />    min-width: 50px; /*suggest a min-width &amp;amp; min-height*/<br />    min-height: 50px; 
+</pre>
+<p><img src="images/33.jpg" width="587" height="237" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .b-resize{<br />
+width: 400px;<br />
+height: 200px; <br />
+background-color: navajowhite;<br />
+resize: horizontal;/* resize: vertical*/<br />
+overflow: auto;<br />
+min-width: 50px; /*suggest a min-width &amp;amp; min-height*/<br />
+min-height: 50px; <br />
+}<br />
+<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+&lt;div class=&quot;b-resize&quot;&gt; &lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3>Box Sizing: We are going to give size of box. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create a css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">-moz-box-sizing: border-box;<br />-webkit-box-sizing: border-box;<br />box-sizing: border-box;</pre>
+<p>&nbsp;</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .box-sizing{<br />
+    width: 400px;<br />
+height: 200px; <br />
+border: 2px solid red;<br />
+-moz-box-sizing: border-box;<br />
+-webkit-box-sizing: border-box;<br />
+box-sizing: border-box;<br />
+}<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+&lt;div class=&quot;box-sizing&quot;&gt; &lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3>Outline: We are going to create a box with outline or groove, double, dotted, dashed,inset. Follow below steps:</h3> 
+<p>1) create div in body section of html</p>
+<p>2) create a css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">outline: 5px double #8330FF;/*18px dotted #8330FF*/<br />outline-offset: 20px;</pre>
+<p><img src="images/22.jpg" width="377" height="183" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .b-outline{<br />
+    margin-left: 50px;<br />
+    width: 200px;<br />
+  height: 100px; </p>
+  <p>    margin-top: 41px;<br />
+    outline: 5px double #8330FF;<br />
+    outline-offset: 20px;<br />
+    }<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+ &lt;div class=&quot;b-outline&quot;&gt; &lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3>Transition : It is something like a animation, if you mouse hover on box slowly box size with content will increase and slowly decrease. Follow below steps:</h3> 
+<p>1) create div in body section of html </p>
+<p>2) create a css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">&nbsp;</pre>
+<p> .transition {<br />
+width: 100px;<br />
+height: 100px;<br />
+background: red;<br />
+/* For Safari 3.1 to 6.0 */<br />
+-webkit-transition-property: width;<br />
+-webkit-transition-duration: 2s;<br />
+-webkit-transition-timing-function: linear;<br />
+-webkit-transition-delay: 1s;<br />
+/* Standard syntax */<br />
+transition-property: width;<br />
+transition-duration: 2s;<br />
+transition-timing-function: linear;<br />
+transition-delay: 1s;<br />
+}<br />
+<br />
+.transition:hover {<br />
+width: 300px;<br />
+}<br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+.transition {<br />
+width: 100px;<br />
+height: 100px;<br />
+background: red;<br />
+/* For Safari 3.1 to 6.0 */<br />
+-webkit-transition-property: width;<br />
+-webkit-transition-duration: 2s;<br />
+-webkit-transition-timing-function: linear;<br />
+-webkit-transition-delay: 1s;<br />
+/* Standard syntax */<br />
+transition-property: width;<br />
+transition-duration: 2s;<br />
+transition-timing-function: linear;<br />
+transition-delay: 1s;<br />
+}<br />
+<br />
+.transition:hover {<br />
+width: 300px;<br />
+}<br />
+<br />
+  &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+ &lt;div class=&quot;transition&quot;&gt;Rruchiwebsolutions&lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+
+
+
+
+
+<h3>Transform : It is something like a transform box to or from corner toward down up. see yellow box. Follow below steps:</h3>
+<p>1) create div in body section of html </p>
+<p>2) create a css class for this div</p>
+<p>3) apply this properties below Ex : </p>
+<h3><br />
+</h3>
+<p>.tranform{</p>
+<p> margin: 49px 0 0 333px;<br />
+width: 100px;<br />
+height: 100px;<br />
+  background: yellow;<br />
+  -moz-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+  -webkit-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+  -o-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+  -ms-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+  transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+  }</p>
+<p>.tranform:hover{<br />
+  width: 100px;<br />
+}</p>
+<pre ng-bind-html="rgbaCode">&nbsp;</pre>
+<p><img src="images/43.jpg" width="177" height="248" /><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .tranform{<br />
+margin: 49px 0 0 333px;<br />
+width: 100px;<br />
+height: 100px;<br />
+background: yellow;<br />
+-moz-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+-webkit-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+-o-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+-ms-transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+transform: scale(2) rotate(5deg) translateX(5px) translateY(5px) skewX(4deg) skewY(5deg);<br />
+}</p>
+  <p>.tranform:hover{<br />
+    width: 100px;<br />
+    }</p>
+  <p><br />
+    &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+ &lt;div class=&quot;tranform&quot;&gt;RWS333&lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+
+
+
+<h3>flexbox: create similar box in number. Follow below steps:</h3> 
+<p>1) create div in body section of html | Create one anker with separate class</p>
+<p>2) create both css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<p>.flex-container {<br />
+  display: -webkit-flex;<br />
+  display: flex;<br />
+  width: 400px;<br />
+  height: 250px;<br />
+  background-color: lightgrey;<br />
+  }</p>
+<p>.flex-item {<br />
+  background-color: cornflowerblue;<br />
+  width: 100px;<br />
+  height: 100px;<br />
+  margin: 10px;<br />
+  }</p>
+<pre ng-bind-html="rgbaCode">&nbsp;</pre>
+<p><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .flex-container {<br />
+display: -webkit-flex;<br />
+display: flex;<br />
+width: 400px;<br />
+height: 250px;<br />
+background-color: lightgrey;<br />
+}</p>
+  <p>.flex-item {<br />
+    background-color: cornflowerblue;<br />
+    width: 100px;<br />
+    height: 100px;<br />
+    margin: 10px;<br />
+    }</p>
+  <p><br />
+  <br />
+    &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+&lt;div class=&quot;flex-container&quot;&gt;<br />
+&lt;div class=&quot;flex-item&quot;&gt;Web designing&lt;/div&gt;<br />
+&lt;div class=&quot;flex-item&quot;&gt;web development&lt;/div&gt;<br />
+&lt;div class=&quot;flex-item&quot;&gt;web hosting&lt;/div&gt; <br />
+&lt;/div&gt;<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+
+
+<h3>Gradient: bar or box with mixed of two color. Follow below steps:</h3> 
+<p>1) create div in body section of html | Create one anker with separate class</p>
+<p>2) create both css class for this div</p>
+<p>3) apply this properties below Ex : <br /></p>
+<pre ng-bind-html="rgbaCode">&nbsp;</pre>
+<p><br />
+</p>
+<div class="code">
+  <p>
+    <style>
+	.trns {
+    -ms-transform: translate(50px,3px); /* IE 9 */
+   	-webkit-transform: translate(50px,3px); /* Safari */
+    transform: translate(50px,3px);
+	width:100px;
+	height:100px;
+	background-color:#00CC99;
+}
+  </style>
+    &lt;style&gt;<br />
+    .gra{<br />
+height: 50px;<br />
+width: 500px;<br />
+<br />
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+29,207cca+69,7db9e8+100 */<br />
+background: #1e5799; /* Old browsers */<br />
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 29%, #207cca 69%, #7db9e8 100%); /* FF3.6-15 */<br />
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 29%,#207cca 69%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */<br />
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 29%,#207cca 69%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */<br />
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */</p>
+  <p>}</p>
+  <p><br />
+    &lt;/style&gt;</p>
+  <p>&lt;body&gt; <br />
+    &lt;div class=&quot;gra&quot;&gt;&lt;/div&gt;<br />
+<br />
+    &lt;/body&gt;<br />
+    
+  </p>
+  <div class="trns">
+</div>
+
+</div>
+
+</body>
+</html>

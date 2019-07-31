@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>angular 1st example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<p>The First name is {{ firstName | uppercase }}</p>
+<p>The Middle name is {{ middleName | lowercase }}</p>
+<p>The Last name is {{ lastName | lowercase }}</p>
+
+</div>
+
+<script language="javascript">
+//creating one app, creating one cotroller
+angular.module('myApp', []).controller('personCtrl', function($scope) {
+$scope.firstName = "ruchiwebsolutions",
+$scope.middleName = "DESIGN AND DEVELOPMENT COMPANY",
+$scope.lastName = "in Dilsukhnagar Hyderabad"
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

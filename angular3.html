@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<p>salaries of employees:</p>
+<ul>
+<li ng-repeat="x in names | orderBy:'salary':false">
+<!-- if you are giving  -country , it will be descending order
+OR
+orderBy:'country':true for descending order.. false means ascending, true means desc.
+
+{{  }} -> this is expression or we are printing the value
+-->
+{{ x.empname + ', ' + x.salary + ', ' + ' ' + x.mobile }}
+</li>
+</ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+$scope.names = [
+{empname:'mukundh',salary:'2000',mobile:'9812452145'},
+{empname:'Ashwin',salary:'3000',mobile:'9821547889'},
+{empname:'shreya',salary:'4000',mobile:'9823563256'},
+{empname:'aishwarya',salary:'5000',mobile:'8712452145'},
+{empname:'neelima',salary:'6000',mobile:'9912452145'},
+    {empname:'teja',salary:'7000',mobile:'9914452145'},
+];
+});
+</script>
+
+</body>
+</html>

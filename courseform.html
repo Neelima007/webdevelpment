@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form validation </title>
+<style>
+body{
+	margin:0 auto;
+	padding:0 auto;
+
+}
+.form{
+	width: 700px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 50px 0px 0px 178px;
+	border-radius:20px;
+
+}
+textarea{ border:1px #960 solid; width:300px; height:60px; color:#900;}
+input { border:1px #960 solid; width:300px; height:30px; color:#900;}
+input[type="radio"] { border:1px #960 solid; width:20px; height:20px; color:#900;}
+input[type="checkbox"] { border:1px #960 solid; width:20px; height:20px; color:#900;}
+input[type="submit"] { border:1px #960 solid; width:100px; height:30px; color:#900;}
+input[type="reset"] { border:1px #960 solid; width:100px; height:30px; color:#900;}
+
+</style>
+<script language="javascript">
+function echeck(str) {
+		var at = "@" ; 
+		var dot="." ;
+		var lat=str.indexOf(at)
+		//alert(lat);
+		var lstr=str.length
+		var ldot=str.indexOf(dot);
+		
+		if (str.indexOf(at)==-1){
+		   alert("Invalid email address")
+		   return false
+		}
+		// str.indexOf(at)==0  @info  -> =0
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid email address")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Invalid email address")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Invalid email address")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+
+ 		 return true					
+	}
+function validate()
+{
+   if(document.f1.firstname.value==""){
+	  alert("please enter your name!"); 
+	  document.f1.firstname.focus();
+	  return false;
+   }
+   if(document.f1.email.value==""){
+	  alert("please enter your email!"); 
+	  document.f1.email.focus();
+	  return false;
+   }
+   if(echeck(document.f1.email.value)==false)
+	{
+			document.f1.email.focus()
+			return false
+	}
+	if(document.f1.mobile.value==""){
+	  alert("please enter your mobile!"); 
+	  document.f1.mobile.focus();
+	  return false;
+   }
+	if (isNaN(document.f1.mobile.value)==true) 
+		{
+     		alert("Enter number plz");
+     		document.f1.mobile.focus();
+			document.f1.mobile.value="";
+     		return false;
+  		}
+		if(document.f1.course.value==""){
+	  alert("select course!"); 
+	  document.f1.course.focus();
+	  return false;
+   }
+   if ( ( document.f1.mode[0].checked == false )
+         && ( document.f1.mode[1].checked == false ) )
+             {
+                alert ( "Please choose mode" );
+		         document.f1.mode[0].focus();
+                 return false;
+              }
+			if ( ( document.f1.ctime[0].checked == false )
+               && ( document.f1.ctime[1].checked == false ) 
+			   && ( document.f1.ctime[2].checked == false )
+			   )
+             {
+                alert ( "Please choose Class time" );
+		        document.f1.ctime[0].focus();
+               return false;
+             }
+			if(document.f1.query1.value==""){
+		  alert("please enter your query!"); 
+		  document.f1.query1.focus();
+		  return false;
+			 }
+   return true;
+}
+</script>
+</head>
+
+<body>
+<div class="form">
+  <h3 style="margin-left:50px;"> Fill out this form!</h3>
+  <pre>
+  	<form name="f1" method="post" onSubmit="return validate()">
+         Name :  <input type="text" name="firstname">
+         
+         Email : <input type="text" name="email">
+         
+         Mobile :<input type="text" name="mobile">
+         
+         Course : <select name="course">
+                  <option value="">Select Course</option>
+                  <option value="PHP Training">PHP Training</option>
+                  <option value="Web Designing Training">Web Designing Training</option>
+                  <option value="SEO Training">SEO Training</option>
+         </select>
+         
+           Mode : <input type="radio" name="mode" value="ClassRoom Training">ClassRoom Training | <input type="radio" name="mode" value="Online Training">Online Training 
+        
+         
+         Class Time:<input type="checkbox" name="ctime" value="Weekday Training">Weekday Training | <input type="checkbox" name="ctime" value="Weekend Training">Weekend Training | <input type="checkbox" name="ctime" value="Fasttract Training">Fasttract Training
+         
+         Your Query : <textarea name="query1"> </textarea>
+         
+                    <input type="submit" name="submit" value="Submit"> |  <input type="reset" name="reset" value="Cancel">
+         </form>
+    </pre>
+  </div>
+</body>
+</html>

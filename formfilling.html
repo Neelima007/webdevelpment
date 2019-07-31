@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 6TH class :Notes</title>
+<style type="text/css">
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+</style>
+<script>
+
+function echeck(str) {
+//we are checking email compulsory have @ , dot(.), should not be space in email, should not be @ (at the rate) two time or 3 time, shold not be dot(.) two or three times.		
+		
+		var at="@";
+		var dot=".";
+		var lat=str.indexOf(at)
+		//alert(lat)
+		var lstr=str.length
+		//alert(lstr);//18
+		//alert(str.indexOf(at));//-1
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1)
+		{
+		   alert("Invalid email address")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0){
+		   alert("Invalid email address")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0){
+		    alert("Invalid email address")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+
+		    alert("Invalid email address")
+		    return false
+		 }
+			 //alert(str.substring(lat-1,lat));
+			 
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid email address")
+		    return false
+		 }
+
+ 		 return true					
+	}
+function validate()
+{
+	if(document.f1.fname.value =="")// document.form-name.name-of-textFieldName.vaue==""
+	{
+		alert("Please enter your name...");
+		document.f1.fname.focus();
+		return false;
+	}
+	/* Here we are checking only fields is blank for email */
+	if(document.f1.email.value =="")
+	{
+		alert("Please enter your email...");
+		document.f1.email.focus();
+		return false;
+	}	
+	/* Here we are checking proper email validation, it will go to echeck function */
+	if(echeck(document.f1.email.value)==false)
+	{
+		document.f1.email.focus()
+		return false
+	}
+	
+	if(document.f1.phone.value =="")
+	{
+		alert("Please enter your phone...");
+		document.f1.phone.focus();
+		return false;
+	}
+	if (isNaN(document.f1.phone.value)==true)
+	{
+     alert("Enter number plz");
+     document.f1.phone.focus();
+	 document.f1.phone.value="";
+     return false;
+  	}
+	if(document.f1.city.value =="")
+	{
+		alert("Select your city");
+		document.f1.city.focus();
+		return false;
+	}
+	if((document.f1.gender[0].checked == false )
+       &&(document.f1.gender[1].checked == false ))
+    {
+      alert ( "Please choose male or female" );
+	  document.f1.gender[0].focus();
+	  //document.f1.gender[1].focus();
+      return false;
+    }
+	if(document.f1.address.value =="")
+	{
+		alert("Enter your address");
+		document.f1.address.focus();
+		return false;
+	}
+	if((document.f1.hobbies[0].checked == false )
+       &&(document.f1.hobbies[1].checked == false ))
+    {
+      alert ( "Please choose hobbies" );
+	  document.f1.hobbies[0].focus();
+	  //document.f1.gender[1].focus();
+      return false;
+    }
+	
+	return true;
+}
+</script>
+</head>
+
+<body>
+<p><b><span style="color:blue;background:yellow; background-color: yellow"> Javascrpt validation notes</span></b></p>
+<p>
+<pre>
+<h3> Digital Maketing training Hyderabad</h3>
+=>If you want to validate the form , firstly create one form
+
+=>Form : It is a container which holds all html elements like input box, dropdown, textarea, radio button , checkbox etc.
+=> Every form have form name
+=> Every form have method, we have two type of method a) GET , b) POST
+Method is way of posting the value to page.
+What is GET ??
+If get method, then value will go to url of page.
+What is POST ??
+If get method, then value will go to BODY of page.
+
+what is onsubmit in form??
+It is a html event which hold javascript function. As soon as you click on submit button in form, one html event will fired and it will go to javascript function.
+
+
+</pre>
+</p>
+
+<p>
+<form name="f1" method="post" onsubmit="return validate();">
+            <div class="content-right">
+   <span style="color:#036"> Welcome to PHP2RANJA</span>
+               
+<P>Name:<input name="fname" type="text" ><br>
+Email : <input name="email" type="text"> <br>
+Phone : <input type="text" name="phone"><br>
+City : <select name="city" size="1">
+  <option>select</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="New Delhi">New Delhi</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Pune">Pune</option>
+</select><br>
+Gender : <input name="gender" type="radio" value="male"> male | <input name="gender" type="radio" value="female"> female<br>
+Address : <textarea name="address" cols="15" rows="4"></textarea><br>
+Hobbies : <input name="hobbies" type="checkbox" value="movies">movies <input name="hobbies" type="checkbox" value="music">music<br>
+file : <input type="file" name="uploadfile"><br>
+  <input type="submit" name="submit" value="submit">
+  <input type="reset" name="reset" value="Cancel">
+  <br>
+<strong></strong></P>
+            
+           
+          </div>
+ 			</form>
+</p>
+</body>
+</html>
